@@ -11,11 +11,11 @@
     <script>
       function onSubmit(token) {
         axios
-          .get("https://clemensd.kor-test.com/yahoo-fincance-I/auto-complete?q=tesla&region=US", {
+          .get("https://clemensd.kor-test.com/yahoo-finance-II/auto-complete?q=tesla&region=US", {
             headers: {
               timestamp: new Date().toUTCString(),
               token,
-              "x-api-key": "uGVt9gnj8Yyg9id4WAYn9rvULjLwHJO83EiIomOj",
+              "x-api-key": "fRpVJQRe9M1sjKOuLjuL3agGbYPecl5X9ElRlTDv",
             },
           })
           .then((response) => {
@@ -37,7 +37,7 @@
       <!-- Oops.... avoid the name="submit" below -->
       <button
         class="g-recaptcha"
-        data-sitekey="6LdNACQcAAAAAPvC80ImoFVTuAbqPR6GXBV7oFsO"
+        data-sitekey="6LdXnDQcAAAAAAPAH5urZWxs2QYKdd4bqLixCL7O"
         data-callback="onSubmit"
       >
         Submit
