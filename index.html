@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>imple page</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      function onSubmit(token) {
+        axios
+          .get("https://clemensk.korconnect.io/yahoo-finances332/auto-complete?q=tesla&region=US", {
+            headers: {
+              timestamp: new Date().toUTCString(),
+              token,
+              "x-api-key": "uGVt9gnj8Yyg9id4WAYn9rvULjLwHJO83EiIomOj",
+            },
+          })
+          .then((response) => {
+            console.log(response);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      }
+    </script>
+    <style>
+      .grecaptcha-badge {
+        visibility: collapse !important;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="demo-form" action="?" method="POST">
+      <!-- Oops.... avoid the name="submit" below -->
+      <button
+        class="g-recaptcha"
+        data-sitekey="6LdNACQcAAAAAPvC80ImoFVTuAbqPR6GXBV7oFsO"
+        data-callback="onSubmit"
+      >
+        Submit
+      </button>
+      <br />
+    </form>
+  </body>
+</html>
